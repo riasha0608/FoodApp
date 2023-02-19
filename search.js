@@ -6,19 +6,20 @@ function run() {
 }
 
 function reset() {
-    var rowLength = document.getElementById("foodstoringtable").rows.length;
+    var rowLength = document.getElementById("foodTable").rows.length;
     for (let i = 1; i < rowLength; i++) {
-        document.getElementById("foodstoringtable").deleteRow(i);
+        document.getElementById("foodTable").deleteRow(i);
     }
 }
 
 function appendRow(element) {
     var tbl = document.getElementById('foodstoringtable'); // table reference
     let row = document.createElement("tr");
-    let c1 = document.createElement("td")
-    let c2 = document.createElement("td")
-    let c3 = document.createElement("td")
+    let c1 = document.createElement("td");
+    let c2 = document.createElement("td");
+    let c3 = document.createElement("td");
 
+    
     c1.innerText = element;
     c2.innerText = " ";
     c3.innerText = " ";
