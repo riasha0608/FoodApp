@@ -2,6 +2,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+/*   background-color: #fdfbfd; */
 }
 
 .header{
@@ -9,20 +10,17 @@ body {
   text-align: center;
 }
 
-nav {
-  margin-top: 20px;
-}
-
-nav {
-  margin-left: 50px;
-}
-
 .navbar a{
+  text-align: center;
   text-decoration: underline;
   color: black;
+  position: absolute;
+  top: 50px;
+  left: 200px;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 100;
+/*   padding-left: 20px; */
 }
 
 .left-header{
@@ -39,7 +37,7 @@ nav {
 .left-header h1{
   position: absolute;
   font-family: myFont, sans-serif;
-  left: 160px;
+  left: 180px;
   top: 250px;
   font-size: 70px;
   font-weight: 500;
@@ -53,4 +51,43 @@ nav {
   font-weight: 100;
   left: 250px;
   top: 370px;
+}
+
+.row2{
+  text-align: center;
+  margin-left: 100px;
+}
+
+.row2 h1{
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  left: 880px;
+  top: 950px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.row2 h3{
+  font-family: Roboto, sans-serif;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 100;
+  left: 750px;
+  top: 1100px;
+  right: 120px;
+}
+
+.footer{
+  width: 100%
+  background-color: #fad1a5;
+}
+
+.row2 h6{
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  left: 920px;
+  top: 1250px;
 }
