@@ -27,6 +27,9 @@ function appendRow(element) {
     let c1 = document.createElement("td");
     let c2 = document.createElement("td");
     let c3 = document.createElement("td");
+    let c4 = document.createElement("td");
+
+    
 
     
     c1.innerText = element;
@@ -76,6 +79,7 @@ function appendRow(element) {
     row.appendChild(c1);
     row.appendChild(c2);
     row.appendChild(c3);
+    row.appendChild(newRow());
 
     tbl.appendChild(row);
 }
@@ -91,6 +95,34 @@ const findDays = (name) => {
     return why[name];
 }
 
+let noOfButtons = 0;
+let buttonList = [];
+let vers = 0;
+
+
+function newRow() {
+    const myBtn = document.createElement("button");
+    myBtn.innerText = "delete";
+    // document.body.appendChild(myBtn);
+    buttonList.push(myBtn);
+    buttonList[noOfButtons].id = "button" + noOfButtons;
+    // alert(buttonList[noOfButtons].id);
+    myBtn.addEventListener("click", test);
+    noOfButtons += 1;
+    return myBtn;
+}
+
+function test(){
+    // alert(this.id);
+    let x = buttonList.indexOf(this)
+    // alert(x);
+    noOfButtons -= 1;
+
+    console.log(buttonList[0]);
+    buttonList.splice(buttonList.indexOf(this), 1);
+    
+    document.getElementById("foodstoringtable").deleteRow(x);
+}
 
 addButton.addEventListener('click', run)
 deleteButton.addEventListener('click', reset)
