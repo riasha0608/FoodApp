@@ -41,7 +41,6 @@ function appendRow(element) {
         
         a.href = "https://www.youtube.com/watch?v=HnkC0zs8IiM";
         a.title = "Recipe 1";
-        //console.log(a);
         c3.innerHTML = a
     }
     if (element == "butter") {
@@ -51,7 +50,6 @@ function appendRow(element) {
         
         a.href = "https://www.youtube.com/watch?v=Clgpbb8FaQY";
         a.title = "Recipe 1";
-        //console.log(a);
         c3.innerHTML = a
     }
     if (element == "eggs") {
@@ -61,7 +59,6 @@ function appendRow(element) {
         
         a.href = "https://www.youtube.com/watch?v=FlZ2YDoR9jw";
         a.title = "Recipe 1";
-        //console.log(a);
         c3.innerHTML = a
     }
     if (element == "yogurt") {
@@ -71,10 +68,8 @@ function appendRow(element) {
         
         a.href = "https://www.youtube.com/watch?v=XrK2aGg7OGY";
         a.title = "Recipe 1";
-        //console.log(a);
         c3.innerHTML = a
     }
-    //c3.innerText = " ";
     
     row.appendChild(c1);
     row.appendChild(c2);
@@ -103,19 +98,15 @@ let vers = 0;
 function newRow() {
     const myBtn = document.createElement("button");
     myBtn.innerText = "delete";
-    // document.body.appendChild(myBtn);
     buttonList.push(myBtn);
     buttonList[noOfButtons].id = "button" + noOfButtons;
-    // alert(buttonList[noOfButtons].id);
     myBtn.addEventListener("click", test);
     noOfButtons += 1;
     return myBtn;
 }
 
 function test(){
-    // alert(this.id);
     let x = buttonList.indexOf(this)
-    // alert(x);
     noOfButtons -= 1;
 
     console.log(buttonList[0]);
