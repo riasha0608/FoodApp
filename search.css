@@ -1,0 +1,49 @@
+body {
+    font-family: "Roboto";
+}
+
+.main {
+    padding: 20px;
+    text-align: center;
+    margin: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+i {
+    color: white;
+    font-size: 24px;
+}
+
+button, button:hover {
+    outline: none;
+    border: none;
+    background-color: coral;
+}
+
+input, input:focus {
+    width: 60vw;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 24px;
+    margin-right: none;
+    padding: 10px;
+}
+
+button#addItem {
+    margin-left: 10px;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:focus {
+    border-bottom: solid 2px coral;
+}
