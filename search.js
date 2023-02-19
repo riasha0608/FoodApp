@@ -1,8 +1,8 @@
 var element = document.getElementById("FoodItem")
 function run() {
     element = document.getElementById("FoodItem").value;
-    appendRow(element); 
-    console.log("RAN!")
+    appendRow(element);
+    document.getElementById("FoodItem").value = "";
 }
 
 function reset() {

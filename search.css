@@ -10,6 +10,12 @@ body {
     width: 100vw;
 }
 
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 i {
     color: white;
     font-size: 24px;
@@ -23,22 +29,22 @@ button, button:hover {
 
 input, input:focus {
     width: 60vw;
-    height: 60px;
+    height: 40px;
     outline: none;
     border: none;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    font-size: 24px;
+    font-size: 18px;
     margin-right: none;
     padding: 10px;
 }
 
 button#addItem {
     margin-left: 10px;
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -46,4 +52,10 @@ button#addItem {
 
 input:focus {
     border-bottom: solid 2px coral;
+}
+
+#foodstoringtable {
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
 }
