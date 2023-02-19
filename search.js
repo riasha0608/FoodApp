@@ -1,6 +1,7 @@
 import { shoppingCart } from './package.js'
 
-let help = "hi";
+const stringified = JSON.stringify(shoppingCart);
+const parsedData = JSON.parse(stringified);
 
 let element = document.getElementById("FoodItem");
 
@@ -27,49 +28,12 @@ function appendRow(element) {
     let c1 = document.createElement("td");
     let c2 = document.createElement("td");
     let c3 = document.createElement("td");
-    let c4 = document.createElement("td");
 
-    
-
-    
     c1.innerText = element;
-    c2.innerText = readFood(element);
-    if (element == "milk") {
-        var a = document.createElement('a');
-        var linkText = document.createTextNode("Recipe 1");
-        a.appendChild(linkText);
-        
-        a.href = "https://www.youtube.com/watch?v=HnkC0zs8IiM";
-        a.title = "Recipe 1";
-        c3.innerHTML = a
-    }
-    if (element == "butter") {
-        var a = document.createElement('a');
-        var linkText = document.createTextNode("Recipe 1");
-        a.appendChild(linkText);
-        
-        a.href = "https://www.youtube.com/watch?v=Clgpbb8FaQY";
-        a.title = "Recipe 1";
-        c3.innerHTML = a
-    }
-    if (element == "eggs") {
-        var a = document.createElement('a');
-        var linkText = document.createTextNode("Recipe 1");
-        a.appendChild(linkText);
-        
-        a.href = "https://www.youtube.com/watch?v=FlZ2YDoR9jw";
-        a.title = "Recipe 1";
-        c3.innerHTML = a
-    }
-    if (element == "yogurt") {
-        var a = document.createElement('a');
-        var linkText = document.createTextNode("Recipe 1");
-        a.appendChild(linkText);
-        
-        a.href = "https://www.youtube.com/watch?v=XrK2aGg7OGY";
-        a.title = "Recipe 1";
-        c3.innerHTML = a
-    }
+    c2.innerText = findDays(element);
+    
+    let a = "<a href=\"" + findLink(element) + "\" target=\"_blank\">" + findLinkName(element) + "</a>";
+    c3.innerHTML = a;
     
     row.appendChild(c1);
     row.appendChild(c2);
@@ -79,25 +43,25 @@ function appendRow(element) {
     tbl.appendChild(row);
 }
 
-function readFood(food) {
-    help = JSON.stringify(shoppingCart)
-    return findDays(food);
+function findDays(name) {
+    return parsedData[name].expiry;
 }
 
-const findDays = (name) => {
-    const why = JSON.parse(help);
-    console.log(why[name])
-    return why[name];
+function findLink(name) {
+    return parsedData[name].link;
+}
+
+function findLinkName(name) {
+    return parsedData[name].linkName;
 }
 
 let noOfButtons = 0;
 let buttonList = [];
-let vers = 0;
 
 
 function newRow() {
     const myBtn = document.createElement("button");
-    myBtn.innerText = "delete";
+    myBtn.innerHTML = "<i class=\"fa fa-trash\"></i>";
     buttonList.push(myBtn);
     buttonList[noOfButtons].id = "button" + noOfButtons;
     myBtn.addEventListener("click", test);
@@ -108,8 +72,6 @@ function newRow() {
 function test(){
     let x = buttonList.indexOf(this)
     noOfButtons -= 1;
-
-    console.log(buttonList[0]);
     buttonList.splice(buttonList.indexOf(this), 1);
     
     document.getElementById("foodstoringtable").deleteRow(x);

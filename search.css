@@ -81,3 +81,11 @@ nav div ul li a, nav div ul li a:hover, nav div ul li a:visited {
 td {
     text-align: left;
 }
+
+button {
+    color: white;
+}
+
+td button {
+    padding: 5px;
+}
