@@ -31,7 +31,47 @@ function appendRow(element) {
     
     c1.innerText = element;
     c2.innerText = readFood(element);
-    c3.innerText = " ";
+    if (element == "milk") {
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Recipe 1");
+        a.appendChild(linkText);
+        
+        a.href = "https://www.youtube.com/watch?v=HnkC0zs8IiM";
+        a.title = "Recipe 1";
+        //console.log(a);
+        c3.innerHTML = a
+    }
+    if (element == "butter") {
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Recipe 1");
+        a.appendChild(linkText);
+        
+        a.href = "https://www.youtube.com/watch?v=Clgpbb8FaQY";
+        a.title = "Recipe 1";
+        //console.log(a);
+        c3.innerHTML = a
+    }
+    if (element == "eggs") {
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Recipe 1");
+        a.appendChild(linkText);
+        
+        a.href = "https://www.youtube.com/watch?v=FlZ2YDoR9jw";
+        a.title = "Recipe 1";
+        //console.log(a);
+        c3.innerHTML = a
+    }
+    if (element == "yogurt") {
+        var a = document.createElement('a');
+        var linkText = document.createTextNode("Recipe 1");
+        a.appendChild(linkText);
+        
+        a.href = "https://www.youtube.com/watch?v=XrK2aGg7OGY";
+        a.title = "Recipe 1";
+        //console.log(a);
+        c3.innerHTML = a
+    }
+    //c3.innerText = " ";
     
     row.appendChild(c1);
     row.appendChild(c2);
