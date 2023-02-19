@@ -41,7 +41,7 @@ input, input:focus {
     padding: 10px;
 }
 
-button#addItem {
+button#addButton {
     margin-left: 10px;
     font-size: 18px;
     width: 40px;

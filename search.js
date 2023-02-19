@@ -1,16 +1,25 @@
-var element = document.getElementById("FoodItem")
-function run() {
+import { shoppingCart } from './package.js'
+
+let help = "hi";
+
+let element = document.getElementById("FoodItem");
+
+export function run() {
     element = document.getElementById("FoodItem").value;
-    appendRow(element);
+    if (element != "") {
+        appendRow(element);
+    }
     document.getElementById("FoodItem").value = "";
 }
 
 function reset() {
-    var rowLength = document.getElementById("foodTable").rows.length;
-    for (let i = 1; i < rowLength; i++) {
-        document.getElementById("foodTable").deleteRow(i);
+    var rowLength = document.getElementById("foodstoringtable").rows.length;
+    if (rowLength >= 1) {
+        document.getElementById("foodstoringtable").deleteRow(rowLength-1);
     }
 }
+
+
 
 function appendRow(element) {
     var tbl = document.getElementById('foodstoringtable'); // table reference
@@ -21,7 +30,7 @@ function appendRow(element) {
 
     
     c1.innerText = element;
-    c2.innerText = " ";
+    c2.innerText = readFood(element);
     c3.innerText = " ";
     
     row.appendChild(c1);
@@ -30,3 +39,18 @@ function appendRow(element) {
 
     tbl.appendChild(row);
 }
+
+function readFood(food) {
+    help = JSON.stringify(shoppingCart)
+    return findDays(food);
+}
+
+const findDays = (name) => {
+    const why = JSON.parse(help);
+    console.log(why[name])
+    return why[name];
+}
+
+
+addButton.addEventListener('click', run)
+deleteButton.addEventListener('click', reset)

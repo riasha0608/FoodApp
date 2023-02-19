@@ -43,11 +43,11 @@
     <div class="main">
         <div class="searchbar">
             <input type="text" placeholder="Search any food..." id = "FoodItem">
-            <button onclick="run()" id="addItem"><i class="fa fa-solid fa-plus"></i></button>
+            <button id="addButton"><i class="fa fa-solid fa-plus"></i></button>
         </div>
         <br>
         <div class="tableDiv">
-            <table class = "table" id = "foodTable">
+            <table class = "table" id = "̵foodTable">
                 <thead>
                     <th>Food Item</th>
                     <th>Expiry Date</th>
@@ -57,8 +57,8 @@
                 </tbody>
             </table>
         </div>
-        <button onclick="reset()"><i class = "fa fa-trash"></i></button>
-        <script src = "search.js"></script>
+        <button id="deleteButton"̵><i class = "fa fa-trash"></i></button>
+        <script type = "module" src = "search.js"></script>
     </div>
 </body>
 </html>
