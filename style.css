@@ -2,7 +2,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-/*   background-color: #fdfbfd; */
 }
 
 .header{
@@ -11,16 +10,11 @@ body {
 }
 
 .navbar a{
-  text-align: center;
   text-decoration: underline;
   color: black;
-  position: absolute;
-  top: 50px;
-  left: 200px;
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-weight: 100;
-/*   padding-left: 20px; */
 }
 
 .left-header{
@@ -79,7 +73,6 @@ body {
 
 .footer{
   width: 100%
-  background-color: #fad1a5;
 }
 
 .row2 h6{
@@ -90,4 +83,12 @@ body {
   text-align: center;
   left: 920px;
   top: 1250px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav {
+  margin-left: 50px;
 }
