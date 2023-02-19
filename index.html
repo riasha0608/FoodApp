@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
+   
     <label for="Food Item Name: ">Food Item Name: </label>
     <input type="text" id="FoodItem" name="FoodItem" placeholder="Food item:)">
     <br>
-    <button onclick="run()">Click me</button>
-    <button onclick="reset()">Delete First Item</button>
+    <button id="addButton">Click me</button>
+    <button id="deleteButton">Delete Latest Item</button>
     <br>
     <table id="foodstoringtable" border="1">
         <tr>
@@ -21,6 +23,6 @@
             <th>Top 3 Recipes to make with food item</th>
         </tr>
     </table>
-    <script src = "app.js"></script>
+    <script type="module" src = "./app.js"></script>
 </body>
 </html>

@@ -1,14 +1,18 @@
+import { shoppingCart } from './package.js'
+
 var element = document.getElementById("FoodItem")
-function run() {
+// const fs = require('fs');
+let help = 'hi';
+
+export function run() {
     element = document.getElementById("FoodItem").value;
     appendRow(element); 
 }
 
 function reset() {
+    var table = document.getElementById("foodstoringtable")
     var rowLength = document.getElementById("foodstoringtable").rows.length;
-    for (let i = 1; i < rowLength; i++) {
-        document.getElementById("foodstoringtable").deleteRow(i);
-    }
+    table.deleteRow(rowLength - 1);
 }
 
 function appendRow(element) {
@@ -19,7 +23,7 @@ function appendRow(element) {
     let c3 = document.createElement("td")
 
     c1.innerText = element;
-    c2.innerText = " ";
+    c2.innerText = readFood(element);
     c3.innerText = " ";
     
     row.appendChild(c1);
@@ -28,3 +32,17 @@ function appendRow(element) {
 
     tbl.appendChild(row);
 }
+
+function readFood(food) {
+    help = JSON.stringify(shoppingCart)
+    return findDays(food);
+}
+
+const findDays = (name) => {
+    const why = JSON.parse(help);
+    console.log(why[name])
+    return why[name];
+}
+
+addButton.addEventListener('click', run)
+deleteButton.addEventListener('click', reset)
